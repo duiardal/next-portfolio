@@ -14,3 +14,5 @@ cats:
 Test **content**
 
 [Link](#)**!**
+
+![test image](/static/img/skärmavbild-2019-10-02-kl.-22.22.21.png "Japanese text")

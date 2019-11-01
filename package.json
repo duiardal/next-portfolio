@@ -1,0 +1,23 @@
+{
+  "name": "next-portfolio",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "export": "npm run build && next export"
+  },
+  "dependencies": {
+    "@types/next": "^8.0.6",
+    "@types/react": "^16.9.11",
+    "@zeit/next-typescript": "^1.1.1",
+    "frontmatter-markdown-loader": "^3.0.0",
+    "next": "^9.1.2",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.6.4"
+  }
+}

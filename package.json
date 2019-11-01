@@ -12,8 +12,10 @@
   "dependencies": {
     "@types/next": "^8.0.6",
     "@types/react": "^16.9.11",
+    "@types/webpack-env": "^1.14.1",
     "@zeit/next-typescript": "^1.1.1",
     "frontmatter-markdown-loader": "^3.0.0",
+    "netlify-cms": "^2.9.7",
     "next": "^9.1.2",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",

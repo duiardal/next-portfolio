@@ -14,6 +14,7 @@ export default class Home extends Component {
                     <h2>{project.name}</h2>
                     <p>{project.description}</p>
                     <img src={project.image.url}></img>
+                    <a href="https://focused-heyrovsky-c3a35e.netlify.com/static/admin">admin interface</a>
                   </li>
               ))}
           </ul>

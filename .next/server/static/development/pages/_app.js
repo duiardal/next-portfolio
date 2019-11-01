@@ -576,19 +576,13 @@ class MyApp extends next_app__WEBPACK_IMPORTED_MODULE_2___default.a {
       Component,
       pageProps
     } = this.props;
-    return __jsx(next_app__WEBPACK_IMPORTED_MODULE_2__["Container"], {
+    return __jsx(Component, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, pageProps, {
       __source: {
         fileName: _jsxFileName,
         lineNumber: 9
       },
       __self: this
-    }, __jsx(Component, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, pageProps, {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 10
-      },
-      __self: this
-    })));
+    }));
   }
 
 }

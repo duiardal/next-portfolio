@@ -12,15 +12,11 @@
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/about": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
-    ],
-    "/next/dist/pages/_error": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
-    ],
     "/projects": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/projects/project/[slug]": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ]

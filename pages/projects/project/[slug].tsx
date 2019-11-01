@@ -12,22 +12,26 @@ class Post extends Component<Props> {
     return { project };
   }
   render() {
-    if (!this.props.project) return <div>not found</div>;
+
+    if (!this.props.project) {
+        return <div>not found</div>;
+    }
+    else {
 
     const {
-      html,
-      attributes: { thumbnail, title },
-    } = this.props.project.default;
+        html,
+        attributes: { title },
+        } = this.props.project.default;
 
-    return (
-      <>
-        <article>
-          <h1>{title}</h1>
-          <img src={thumbnail} />
-          <div dangerouslySetInnerHTML={{ __html: html }} />
-        </article>
-      </>
-    );
+        return (
+        <>
+            <article>
+            <h1>{title}</h1>
+            <div dangerouslySetInnerHTML={{ __html: html }} />
+            </article>
+        </>
+        );
+    }
   }
 }
 

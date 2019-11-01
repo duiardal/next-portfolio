@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 
 import Link from 'next/link';
 
-const PROJECTS_PATH = '../../content/projects';
-
 const importProjects = async () => {
     // https://medium.com/@shawnstern/importing-multiple-markdown-files-into-a-react-component-with-webpack-7548559fce6f
     // second flag in require.context function is if subdirectories should be searched

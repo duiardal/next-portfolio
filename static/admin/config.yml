@@ -3,8 +3,8 @@ backend:
   branch: master
 media_folder: static/img
 collections:
-  - name: "pages"
-    label: "Pages"
+  - name: "home"
+    label: "Home"
     files:
     - label: "Home"
       name: "home"
@@ -20,4 +20,13 @@ collections:
           fields:
             - { label: "Name", name: "name", widget: "string"}
             - { label: "Description", name: "description", widget: "text"}
-
+    - label: "Pages"
+    name: "pages"
+    folder: "_pages/page"
+    create: true
+    identifier_field: name
+    fields:
+      - {label: "Name", name: "name", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Featured Image", name: "thumbnail", widget: "image"}
+      - {label: "Body", name: "body", widget: "markdown"}

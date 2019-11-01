@@ -1,3 +1,4 @@
+const fs = require('fs');
 const withTypescript = require("@zeit/next-typescript")
 const projectsFolder = './content/projects';
 

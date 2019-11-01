@@ -6,16 +6,12 @@ collections:
   - name: "pages"
     label: "Pages"
     files:
-    - label: "Home"
-      name: "home"
-      file: "content/home.md"
+    create: true
+    - label: "Project"
+      name: "project"
+      file: "content/project.md"
       fields:
         - { label: "Title", name: "title", widget: "string"}
         - { label: "Publish Date", name: "date", widget: "datetime" }
         - { label: "Body", name: "body", widget: "markdown"}
-        - label: 'Cats'
-          name: "cats"
-          widget: list
-          fields:
-            - { label: "Name", name: "name", widget: "string"}
-            - { label: "Description", name: "description", widget: "text"}
+        - { label: "Featured image", name: "thumbnail", widget: "image"}

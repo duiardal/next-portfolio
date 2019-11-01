@@ -22,7 +22,7 @@ collections:
             - { label: "Description", name: "description", widget: "text"}
     - label: "Pages"
     name: "pages"
-    folder: "_pages/page"
+    folder: "content/page.md"
     create: true
     identifier_field: name
     fields:

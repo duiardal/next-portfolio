@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Props } from 'react';
 import Link from 'next/link';
 
 const importProjects = async () => {
@@ -17,29 +17,28 @@ const importProjects = async () => {
     );
 };
 
-interface Props {
-    projectList: any
-}
-
-export default class Projects extends Component<Props> {
-
-    static async getInitialProps() {
-        const projectList = await importProjects();
-        return projectList;
-    }
-
-    render() {
-        return (
-            <div>
-                {this.props.projectList.forEach((currentProject: any) =>
+const Projects = (props: any) => (
+    <div>
+        {props && props.projects.map((project: any) => (
+            <li key={props && props.attributes && props.attributes.slug}>
+                <p>{project}</p>
+            </li>
+        ))}
+        {/* {this.props.projectList.forEach((currentProject: any) =>
                     <Link href={`projects/project/${currentProject.slug}`}>
                         <a>
                             <h2>{currentProject.attributes.title}</h2>
                         </a>
-                    </Link>
-                    )
-                }
-            </div>
-        );
+                    </Link>)
+                } */}
+    </div>
+)
+
+Projects.getInitialProps = async function() {
+    const projectList = await importProjects();
+    return {
+        projects: projectList.map(entry => entry.project)
     }
 }
+
+export default Projects

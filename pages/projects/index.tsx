@@ -31,15 +31,14 @@ export default class Projects extends Component<Props> {
     render() {
         return (
             <div>
-                {this.props.projectList.map((project: { slug: any; attributes: {title: React.ReactNode; }; }) => {
-                    return (
-                        <Link href={`projects/project/${project.slug}`}>
-                            <a>
-                                <h2>{project.attributes.title}</h2>
-                            </a>
-                        </Link>
-                    );
-                })}
+                {this.props.projectList.forEach((currentProject: any) =>
+                    <Link href={`projects/project/${currentProject.slug}`}>
+                        <a>
+                            <h2>{currentProject.attributes.title}</h2>
+                        </a>
+                    </Link>
+                    )
+                }
             </div>
         );
     }

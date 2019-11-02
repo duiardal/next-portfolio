@@ -22,14 +22,12 @@ const getPathsForProjects = () => {
 };
 
 module.exports = {
-    webpack: (cfg) => {
-        cfg.module.rules.push(
-            {
-                test: /\.md$/,
-                use: 'frontmatter-markdown-loader'
-            }
-        )
-        return cfg;
+    webpack: configuration => {
+        configuration.module.rules.push({
+            test: /\.md$/,
+            use: 'frontmatter-markdown-loader',
+        });
+        return configuration;
     },
     async exportPathMap(defaultPathMap) {
         return {
@@ -37,4 +35,4 @@ module.exports = {
             ...getPathsForProjects(),
         };
     },
-}
+};

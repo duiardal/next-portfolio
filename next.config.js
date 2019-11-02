@@ -22,6 +22,7 @@ const getPathsForProjects = () => {
 };
 
 module.exports = {
+    exportTrailingSlash: true,
     webpack: configuration => {
         configuration.module.rules.push({
             test: /\.md$/,
@@ -29,10 +30,17 @@ module.exports = {
         });
         return configuration;
     },
-    async exportPathMap(defaultPathMap) {
-        return {
-            ...defaultPathMap,
-            ...getPathsForProjects(),
+    // async exportPathMap(defaultPathMap) {
+    //     return {
+    //         ...defaultPathMap,
+    //         ...getPathsForProjects(),
+    //     };
+    // },
+    async exportPathMap() {
+        const paths = {
+            '/': { page: '/' },
+            '/about': { page: '/about' }
         };
-    },
+        return paths, getPathsForProjects;
+    }
 };

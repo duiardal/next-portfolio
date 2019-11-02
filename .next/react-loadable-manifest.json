@@ -1,18 +1,10 @@
 {
-  "./dev/noop": [
-    {
-      "id": "./node_modules/next/dist/client/dev/noop.js",
-      "name": "./node_modules/next/dist/client/dev/noop.js",
-      "file": "static/chunks/0.js",
-      "publicPath": "static/chunks/0.js"
-    }
-  ],
   "./test.md": [
     {
-      "id": "./content/projects/test.md",
+      "id": "PkZj",
       "name": "./content/projects/test.md",
-      "file": "static/chunks/1.js",
-      "publicPath": "static/chunks/1.js"
+      "file": "static/chunks/9.3d2becebe09284ff0889.js",
+      "publicPath": "static/chunks/9.3d2becebe09284ff0889.js"
     }
   ]
 }

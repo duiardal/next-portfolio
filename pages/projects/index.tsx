@@ -29,10 +29,9 @@ export default class Projects extends Component<Props> {
     }
 
     render() {
-        const { projectList } = this.props;
         return (
             <div>
-                {/* {projectList.map((project: { slug: any; attributes: {title: React.ReactNode; }; }) => {
+                {this.props.projectList.map((project: { slug: any; attributes: {title: React.ReactNode; }; }) => {
                     return (
                         <Link href={`projects/project/${project.slug}`}>
                             <a>
@@ -40,7 +39,7 @@ export default class Projects extends Component<Props> {
                             </a>
                         </Link>
                     );
-                })} */}
+                })}
             </div>
         );
     }

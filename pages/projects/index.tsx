@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-
 import Link from 'next/link';
 
 const importProjects = async () => {
     // https://medium.com/@shawnstern/importing-multiple-markdown-files-into-a-react-component-with-webpack-7548559fce6f
     // second flag in require.context function is if subdirectories should be searched
-    const markdownFiles = require
-        .context('../../content/projects', false, /\.md$/)
+
+    const markdownContext = require.context('../../content/projects', false, /\.md$/);
+    const markdownFiles = markdownContext
         .keys()
         .map(relativePath => relativePath.substring(2));
     return Promise.all(
@@ -25,24 +25,22 @@ export default class Projects extends Component<Props> {
 
     static async getInitialProps() {
         const projectList = await importProjects();
-
-        return { projectList };
+        return projectList;
     }
 
     render() {
         const { projectList } = this.props;
         return (
-            <div >
-                {projectList.map(project => {
+            <div>
+                {/* {projectList.map((project: { slug: any; attributes: {title: React.ReactNode; }; }) => {
                     return (
                         <Link href={`projects/project/${project.slug}`}>
                             <a>
-                                <img src={project.attributes.thumbnail} />
                                 <h2>{project.attributes.title}</h2>
                             </a>
                         </Link>
                     );
-                })}
+                })} */}
             </div>
         );
     }

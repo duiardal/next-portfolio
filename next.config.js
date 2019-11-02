@@ -6,10 +6,11 @@ const getPathsForProjects = () => {
     return fs
         .readdirSync(projectsFolder)
         .map(projectName => {
+            console.log(projectName);
             const trimmedName = projectName.substring(0, projectName.length - 3);
             return {
-                [`/projects/projects/${trimmedName}`]: {
-                    page: '/projects/projects/[slug]',
+                [`/projects/project/${trimmedName}`]: {
+                    page: '/projects/project/[slug]',
                     query: {
                         slug: trimmedName,
                     },
@@ -22,7 +23,6 @@ const getPathsForProjects = () => {
 };
 
 module.exports = {
-    exportTrailingSlash: true,
     webpack: configuration => {
         configuration.module.rules.push({
             test: /\.md$/,
@@ -30,17 +30,10 @@ module.exports = {
         });
         return configuration;
     },
-    // async exportPathMap(defaultPathMap) {
-    //     return {
-    //         ...defaultPathMap,
-    //         ...getPathsForProjects(),
-    //     };
-    // },
-    async exportPathMap() {
-        const paths = {
-            '/': { page: '/' },
-            '/about': { page: '/about' }
+    async exportPathMap(defaultPathMap) {
+        return {
+            ...defaultPathMap,
+            ...getPathsForProjects(),
         };
-        return paths, getPathsForProjects;
-    }
+    },
 };

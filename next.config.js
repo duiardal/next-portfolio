@@ -1,4 +1,4 @@
-import readdirSync from 'fs';
+import * as readdirSync from 'fs';
 
 const projectsFolder = './content/projects';
 

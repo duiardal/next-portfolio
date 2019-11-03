@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Project = (project) => {
-  if (!project) {
-    return <div>not found!</div>;
+const Post = (props: any) => {
+  if (!props && !props.project) {
+    return <div>not found</div>;
   }
 
-  const { html, attributes: { title } } = project.default;
+  const { html, attributes: { title } } = props.project.default;
   return (
     <>
       <article>
@@ -16,11 +16,11 @@ const Project = (project) => {
   );
 };
 
-Project.getInitialProps = async ({ query }) => {
+Post.getInitialProps = async ({ query }) => {
   const { slug } = query;
   const project = await import(`../../../content/projects/${slug}.md`).catch(() => null);
 
   return { project };
 };
 
-export default Project;
+export default Post;

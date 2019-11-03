@@ -1,38 +1,29 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-interface Props {
-    project: any;
+const Post = (props: any) => {
+
+    if (!props.project) {
+        return <div>not found</div>;
+    }
+
+    else {
+        const { html, attributes: { title }, } = props.project.default;
+        return (
+            <>
+                <article>
+                    <h1>{title}</h1>
+                    <div dangerouslySetInnerHTML={{ __html: html }} />
+                </article>
+            </>
+        );
+    }
 }
 
-class Post extends Component<Props> {
-  static async getInitialProps({ query }) {
+Post.getInitialProps = async ({ query }) => {
     const { slug } = query;
     const project = await import(`../../../content/projects/${slug}.md`).catch(error => null);
 
     return { project };
-  }
-  render() {
-
-    if (!this.props.project) {
-        return <div>not found</div>;
-    }
-    else {
-
-    const {
-        html,
-        attributes: { title },
-        } = this.props.project.default;
-
-        return (
-        <>
-            <article>
-            <h1>{title}</h1>
-            <div dangerouslySetInnerHTML={{ __html: html }} />
-            </article>
-        </>
-        );
-    }
-  }
 }
 
 export default Post;

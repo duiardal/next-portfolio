@@ -4,10 +4,12 @@ import content from '../../content/about.md';
 const About = () => {
     const { attributes, html } = content;
     return (
-        <React.Fragment>
-            <h1>{attributes.title}</h1>
-            <div dangerouslySetInnerHTML={{ __html: html }} />
-        </React.Fragment>
+        <>
+            <main>
+                <h1>{attributes.title}</h1>
+                <article dangerouslySetInnerHTML={{ __html: html }} />
+            </main>
+        </>
     );
 };
 

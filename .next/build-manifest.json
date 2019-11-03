@@ -24,11 +24,7 @@
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/projects": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
-    ],
-    "/projects/project/[slug]": [
+    "/next/dist/pages/_error": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ]

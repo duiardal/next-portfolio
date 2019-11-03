@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 
-const importProjects = async () => {
+export const importProjects = async () => {
     const markdownContext = require.context('../../content/projects', false, /\.md$/);
     const markdownFiles = markdownContext
         .keys()
@@ -15,7 +15,7 @@ const importProjects = async () => {
 };
 
 
-const Projects = (props: any) => {
+const Projects = (props) => {
     const { projectList } = props
     return (
         <div>

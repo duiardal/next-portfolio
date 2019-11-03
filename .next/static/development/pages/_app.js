@@ -19,13 +19,13 @@ var Footer = function Footer() {
   return __jsx("footer", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 5
+      lineNumber: 4
     },
     __self: this
   }, __jsx("nav", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6
+      lineNumber: 5
     },
     __self: this
   }, "\xA9 D\xFAi Ardal"));
@@ -67,39 +67,42 @@ var Header = function Header() {
     },
     __self: this
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: '/',
+    href: "/",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 8
     },
     __self: this
   }, __jsx("a", {
+    href: "/",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 9
     },
     __self: this
   }, "home ")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: '/projects',
+    href: "/projects",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 11
     },
     __self: this
   }, __jsx("a", {
+    href: "/projects",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 12
     },
     __self: this
   }, "projects ")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: '/about',
+    href: "/about",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 14
     },
     __self: this
   }, __jsx("a", {
+    href: "/about",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 15

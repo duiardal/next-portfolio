@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "dev": "next",
     "build": "next build",
     "start": "next start",
@@ -14,8 +15,17 @@
     "@types/react": "^16.9.11",
     "@types/styled-components": "^4.1.20",
     "@types/webpack-env": "^1.14.1",
+    "@typescript-eslint/eslint-plugin": "^2.6.0",
+    "@typescript-eslint/parser": "^2.6.0",
     "@zeit/next-typescript": "^1.1.1",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-airbnb-typescript": "^6.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.16.0",
+    "eslint-plugin-react-hooks": "^1.7.0",
     "frontmatter-markdown-loader": "^3.0.0",
+    "jest-styled-components": "^6.3.3",
     "mobx": "^5.14.2",
     "mobx-react": "^6.1.4",
     "netlify-cms": "^2.9.7",
@@ -25,5 +35,13 @@
     "styled-components": "^4.4.1",
     "ts-loader": "^6.2.1",
     "typescript": "^3.6.4"
+  },
+  "devDependencies": {
+    "eslint": "^6.6.0",
+    "eslint-config-prettier": "^6.5.0",
+    "eslint-import-resolver-typescript": "^2.0.0",
+    "eslint-plugin-json": "^2.0.1",
+    "eslint-plugin-prettier": "^3.1.1",
+    "prettier": "^1.18.2"
   }
 }

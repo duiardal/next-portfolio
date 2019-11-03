@@ -1,39 +1,34 @@
-const fs = require('fs');
-const withTypescript = require("@zeit/next-typescript")
+import { readdirSync } from 'fs';
+
 const projectsFolder = './content/projects';
 
-const getPathsForProjects = () => {
-    return fs
-        .readdirSync(projectsFolder)
-        .map(projectName => {
-            console.log(projectName);
-            const trimmedName = projectName.substring(0, projectName.length - 3);
-            return {
-                [`/projects/project/${trimmedName}`]: {
-                    page: '/projects/project/[slug]',
-                    query: {
-                        slug: trimmedName,
-                    },
-                },
-            };
-        })
-        .reduce((acc, curr) => {
-            return { ...acc, ...curr };
-        }, {});
-};
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
+const getPathsForProjects = () => readdirSync(projectsFolder)
+  .map((projectName) => {
+    const trimmedName = projectName.substring(0, projectName.length - 3);
+    return {
+      [`/projects/project/${trimmedName}`]: {
+        page: '/projects/project/[slug]',
+        query: {
+          slug: trimmedName,
+        },
+      },
+    };
+  })
+  .reduce((acc, curr) => ({ ...acc, ...curr }), {});
 
-module.exports = {
-    webpack: configuration => {
-        configuration.module.rules.push({
-            test: /\.md$/,
-            use: 'frontmatter-markdown-loader',
-        });
-        return configuration;
-    },
-    async exportPathMap(defaultPathMap) {
-        return {
-            ...defaultPathMap,
-            ...getPathsForProjects(),
-        };
-    },
-};
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
+export function webpack(configuration) {
+  configuration.module.rules.push({
+    test: /\.md$/,
+    use: 'frontmatter-markdown-loader',
+  });
+  return configuration;
+}
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
+export async function exportPathMap(defaultPathMap) {
+  return {
+    ...defaultPathMap,
+    ...getPathsForProjects(),
+  };
+}

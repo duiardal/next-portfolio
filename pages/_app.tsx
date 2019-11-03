@@ -4,14 +4,14 @@ import Header from '../components/header';
 import Footer from '../components/footer';
 
 export default class MyApp extends App {
-    render() {
-        const { Component, pageProps } = this.props;
-        return (
-            <>
-                <Header/>
-                <Component {...pageProps} />
-                <Footer/>
-            </>
-        );
-    }
+  render(): JSX.Element {
+    const { Component, pageProps } = this.props;
+    return (
+      <>
+        <Header />
+        <Component {...pageProps} />
+        <Footer />
+      </>
+    );
+  }
 }

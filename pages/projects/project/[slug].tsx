@@ -5,7 +5,7 @@ const Project: { (project): JSX.Element;
   getInitialProps({ query }: { query }): Promise<{ project }>;
 } = (project) => {
   if (!project) {
-    return <div>not found</div>;
+    return <div>not found!</div>;
   }
 
   const { html, attributes: { title } } = project.default;

@@ -3,6 +3,9 @@ import styled from 'styled-components';
 
 const ImageContainer = styled.div`
     grid-column: span 3;
+    @media screen and (max-width: 768px) {
+        grid-column: span 6;
+    }
 `
 
 const Image = styled.img`

@@ -1,5 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
+import { Grid } from '../../components/Grid';
+import ImageSlider from '../../components/imageSlider';
 
 export const importProjects = async () => {
     const markdownContext = require.context('../../content/projects', false, /\.md$/);
@@ -19,14 +21,14 @@ const Projects = (props) => {
     const { projectList } = props
     return (
         <div>
-            <h2>List of projects:</h2>
-            {projectList && projectList.map((project: any) => (
-                <li key={project.attributes.title}>
-                    <Link href={`projects/project/${project.slug}`}>
-                        <a>{project.attributes.title}</a>
-                    </Link>
-                </li>
-            ))}
+            <Grid>
+                {/* HÄR LANGAR VI IN EN KARUSELL MED ALLA BILDER - ORDNING BESTÄMS AV ALT-TAGGEN? */}
+                {projectList && projectList.map((project: any) => (
+                    <ImageSlider
+                        key={project.attributes.slug}
+                        images={project.attributes.thumbnail && project.attributes.thumbnail} />
+                ))}
+            </Grid>
         </div>
     )
 }

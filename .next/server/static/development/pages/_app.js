@@ -147,55 +147,55 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 const Header = () => __jsx("header", {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 6
+    lineNumber: 5
   },
   __self: undefined
 }, __jsx("nav", {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 7
+    lineNumber: 6
   },
   __self: undefined
 }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
   href: "/",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 8
+    lineNumber: 7
   },
   __self: undefined
 }, __jsx("a", {
   href: "/",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 9
+    lineNumber: 8
   },
   __self: undefined
 }, "home ")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
   href: "/projects",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 11
+    lineNumber: 10
   },
   __self: undefined
 }, __jsx("a", {
   href: "/projects",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 12
+    lineNumber: 11
   },
   __self: undefined
 }, "projects ")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
   href: "/about",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 14
+    lineNumber: 13
   },
   __self: undefined
 }, __jsx("a", {
   href: "/about",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 15
+    lineNumber: 14
   },
   __self: undefined
 }, "about "))));

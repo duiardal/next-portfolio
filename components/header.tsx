@@ -1,8 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
-import { NextPage } from 'next';
 
-const Header: NextPage = () => (
+const Header = () => (
   <header>
     <nav>
       <Link href="/">

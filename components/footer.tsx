@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Footer: React.FunctionComponent = (() => (
+const Footer = (() => (
   <footer>
     <nav>
         © Dúi Ardal

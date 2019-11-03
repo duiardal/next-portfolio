@@ -1,13 +1,10 @@
-/* eslint-disable react/prop-types */
-/* eslint-disable react/no-danger */
 import React from 'react';
 import content from '../content/home.md';
 import { ImportProjects } from './projects/index';
 import ImageSlider from '../components/imageSlider';
 import Grid from '../components/Grid';
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export const Home: any = (props) => {
+export const Home = (props) => {
   const { projectList } = props;
   const { attributes, html } = content;
   return (
@@ -31,7 +28,6 @@ export const Home: any = (props) => {
   );
 };
 
-// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 Home.getInitialProps = async () => {
   const projectList = await ImportProjects();
   return {

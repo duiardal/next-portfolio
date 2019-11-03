@@ -12,8 +12,7 @@ const Image = styled.img`
     width: 100%;
 `;
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const ImageSlider: any = (imageSrc: any) => (
+const ImageSlider = (imageSrc: any) => (
   <ImageContainer>
     <Image src={imageSrc.images} />
   </ImageContainer>

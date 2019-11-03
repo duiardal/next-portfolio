@@ -1,10 +1,8 @@
-/* eslint-disable react/prop-types */
 import React from 'react';
 import Grid from '../../components/Grid';
 import ImageSlider from '../../components/imageSlider';
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export const ImportProjects: any = async () => {
+export const ImportProjects = async () => {
   const markdownContext = require.context('../../content/projects', false, /\.md$/);
   const markdownFiles = markdownContext
     .keys()
@@ -18,14 +16,13 @@ export const ImportProjects: any = async () => {
 };
 
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const Projects: any = (props) => {
+const Projects = (props) => {
   const { projectList } = props;
   return (
     <div>
       <Grid>
         {/* HÄR LANGAR VI IN EN KARUSELL MED ALLA BILDER - ORDNING BESTÄMS AV ALT-TAGGEN? */}
-        {projectList && projectList.map((project) => (
+        {projectList && projectList.map((project: any) => (
           <ImageSlider
             key={project.attributes.slug}
             images={project.attributes.thumbnail && project.attributes.thumbnail}
@@ -36,7 +33,6 @@ const Projects: any = (props) => {
   );
 };
 
-// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 Projects.getInitialProps = async () => {
   const projectList = await ImportProjects();
   return {

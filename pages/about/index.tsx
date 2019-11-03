@@ -1,9 +1,7 @@
-/* eslint-disable react/no-danger */
 import React from 'react';
-import { NextPage } from 'next';
 import content from '../../content/about.md';
 
-const About: NextPage = () => {
+const About= () => {
   const { attributes, html } = content;
   return (
     <>

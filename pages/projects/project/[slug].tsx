@@ -1,9 +1,8 @@
 /* eslint-disable react/no-danger */
 import React from 'react';
 
-const Project: { (project): JSX.Element;
-  getInitialProps({ query }: { query }): Promise<{ project }>;
-} = (project) => {
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
+const Project = (project) => {
   if (!project) {
     return <div>not found!</div>;
   }

@@ -3,13 +3,15 @@ import content from '../content/home.md';
 import { ImportProjects } from './projects/index';
 import ImageSlider from '../components/imageSlider';
 import Grid from '../components/Grid';
+import { Heading1 } from '../components/text'
+import Main from '../layout/main-content';
 
 const Home = (props: { projectList: Object[]; }) => {
   const { projectList } = props;
   const { attributes, html } = content;
   return (
-    <main>
-      <h1>{attributes.title}</h1>
+    <Main>
+      <Heading1>{attributes.title}</Heading1>
       <article>
         <section dangerouslySetInnerHTML={{ __html: html }} />
         <section>
@@ -24,7 +26,7 @@ const Home = (props: { projectList: Object[]; }) => {
           </Grid>
         </section>
       </article>
-    </main>
+    </Main>
   );
 };
 

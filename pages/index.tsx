@@ -25,7 +25,6 @@ const Home = () => {
     slidesToScroll: 1
   };
   const { attributes } = content;
-  console.log(attributes.carousel.map(item => item.image))
   return (
     <>
       <Heading1>{attributes.title}</Heading1>

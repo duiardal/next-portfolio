@@ -286,7 +286,7 @@ function _templateObject() {
 var Nav = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].nav(_templateObject());
 
 var Sidebar = function Sidebar() {
-  return __jsx("nav", {
+  return __jsx(Nav, {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 10

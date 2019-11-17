@@ -304,7 +304,7 @@ const Nav = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.nav`
     grid-column: span 2;
 `;
 
-const Sidebar = () => __jsx("nav", {
+const Sidebar = () => __jsx(Nav, {
   __source: {
     fileName: _jsxFileName,
     lineNumber: 10

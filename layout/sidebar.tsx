@@ -7,7 +7,7 @@ const Nav = styled.nav`
 `
 
 const Sidebar = () => (
-    <nav>
+    <Nav>
         <Link href="/">
             <a href="/">home </a>
         </Link>
@@ -17,7 +17,7 @@ const Sidebar = () => (
         <Link href="/about">
             <a href="/about">about </a>
         </Link>
-    </nav>
+    </Nav>
 );
 
 export default Sidebar;

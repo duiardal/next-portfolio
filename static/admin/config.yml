@@ -12,7 +12,13 @@ collections:
         fields:
           - { label: 'Title', name: 'title', widget: 'string' }
           - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+          - { label: 'Carousel Images', name: 'image', widget: 'image'}
           - { label: 'Body', name: 'body', widget: 'markdown' }
+          - label: 'Carousel'
+            name: "carousel"
+            widget: list
+            fields:
+              - { label: "Image", name: "image", widget: "image"}
       - label: 'About'
         name: 'about'
         file: 'content/about.md'

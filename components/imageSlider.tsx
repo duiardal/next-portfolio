@@ -1,21 +1,31 @@
 import React from 'react';
 import styled from 'styled-components';
+import Slick, { Settings } from "react-slick"
 
-const ImageContainer = styled.div`
-    grid-column: span 3;
-    @media screen and (max-width: 768px) {
-        grid-column: span 6;
-    }
-`;
+export class ImageSlider extends React.Component<Settings> {
+  firstClientX: any
+  firstClientY: any
+  clientX: any
+  clientY: any
 
-const Image = styled.img`
-    width: 100%;
-`;
+  componentDidMount() {
+    window.addEventListener("touchstart", this.touchStart)
+  }
 
-const ImageSlider = (imageSrc: any) => (
-  <ImageContainer>
-    <Image src={imageSrc.images} />
-  </ImageContainer>
-);
+  componentWillUnmount() {
+    window.removeEventListener("touchstart", this.touchStart)
+  }
 
-export default ImageSlider;
+  touchStart = (e: any) => {
+    this.firstClientX = e.touches[0].clientX
+    this.firstClientY = e.touches[0].clientY
+  }
+
+  render() {
+    return (
+      <Slick {...this.props}>
+        {this.props.children}
+      </Slick>
+    )
+  }
+}

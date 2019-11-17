@@ -1,16 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 import content from '../content/home.md';
 import { ImportProjects } from './projects/index';
-import ImageSlider from '../components/imageSlider';
+import { ImageSlider } from '../components/imageSlider';
 import Grid from '../components/Grid';
 import { Heading1 } from '../components/text'
-import Main from '../layout/main-content';
 
 const Home = (props: { projectList: Object[]; }) => {
   const { projectList } = props;
   const { attributes, html } = content;
   return (
-    <Main>
+    <>
       <Heading1>{attributes.title}</Heading1>
       <article>
         <section dangerouslySetInnerHTML={{ __html: html }} />
@@ -26,7 +25,7 @@ const Home = (props: { projectList: Object[]; }) => {
           </Grid>
         </section>
       </article>
-    </Main>
+      </>
   );
 };
 

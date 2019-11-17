@@ -1,6 +1,6 @@
 import React from 'react';
 import Grid from '../../components/Grid';
-import ImageSlider from '../../components/imageSlider';
+import ImageGrid from '../../components/image-grid';
 
 export const ImportProjects = async () => {
   const markdownContext = require.context('../../content/projects', false, /\.md$/);
@@ -16,20 +16,18 @@ export const ImportProjects = async () => {
 };
 
 
-const Projects = (props) => {
+const Projects = (props: { projectList: any; }) => {
   const { projectList } = props;
   return (
-    <div>
-      <Grid>
-        {/* HÄR LANGAR VI IN EN KARUSELL MED ALLA BILDER - ORDNING BESTÄMS AV ALT-TAGGEN? */}
-        {projectList && projectList.map((project: any) => (
-          <ImageSlider
-            key={project.attributes.slug}
-            images={project.attributes.thumbnail && project.attributes.thumbnail}
-          />
-        ))}
-      </Grid>
-    </div>
+    <Grid>
+      {/* HÄR LANGAR VI IN EN KARUSELL MED ALLA BILDER - ORDNING BESTÄMS AV ALT-TAGGEN? */}
+      {projectList && projectList.map((project: any) => (
+        <ImageGrid
+          key={project.attributes.slug}
+          images={project.attributes.thumbnail && project.attributes.thumbnail}
+        />
+      ))}
+    </Grid>
   );
 };
 

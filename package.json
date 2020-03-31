@@ -20,7 +20,7 @@
     "mobx": "^5.14.2",
     "mobx-react": "^6.1.4",
     "netlify-cms": "^2.9.7",
-    "next": "^9.1.2",
+    "next": "^9.3.2",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-slick": "^0.25.2",
